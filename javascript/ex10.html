@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+    var a = {
+        name: 'hey',
+        age: 20,
+    }
+    document.write(a.name);
+    document.write(a.age);
+    a.gender = "man";
+    document.write(a.gender);
+    a["사는 곳"] = "부산광역시";
+    document.write(a["사는 곳"]);
+</script>
+
+<h2>Iterate</h2>
+<script>
+    for(let i in a){
+        document.write(i+ ' : ' + a[i] + '<br>');
+    }
+</script>
+<h2>Property & Method</h2>
+<script>
+a.showAll = function() {
+    for(let i in this){
+        document.write(i+ ' : ' + this[i] + '<br>');
+    }
+}
+a.showAll();
+</script>
+</body>
+</html>
